@@ -4,7 +4,7 @@ import { AppError } from "../../errors/AppError.ts";
 import { UpdateUserDTO } from "../../schemas/UpdateUser.schema.ts";
 
 export class UpdateUserService {
-  async execute(data: UpdateUserDTO) {
+  execute = async (data: UpdateUserDTO) => {
     const user = await prisma.user.findUnique({ where: { id: data.user_id } });
 
     if (!user) {
@@ -67,5 +67,5 @@ export class UpdateUserService {
     });
 
     return userUpdated;
-  }
+  };
 }

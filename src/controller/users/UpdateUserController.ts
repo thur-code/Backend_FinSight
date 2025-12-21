@@ -3,7 +3,7 @@ import { updateUserSchema } from "../../schemas/UpdateUser.schema.ts";
 import { UpdateUserService } from "../../services/users/UpdateUserService.ts";
 
 export class UpdateUserController {
-  async handle(req: Request, res: Response) {
+  handle = async (req: Request, res: Response) => {
     if (!req.user_id) {
       return res.status(401).json({ error: "Unauthorized" });
     }
@@ -35,5 +35,5 @@ export class UpdateUserController {
     });
 
     return res.json({ message: "Update completed successfully" });
-  }
+  };
 }

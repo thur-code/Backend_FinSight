@@ -6,7 +6,7 @@ interface UserRequest {
 }
 
 export class DeleteUserService {
-  async execute({ user_id }: UserRequest) {
+  execute= async ({ user_id }: UserRequest) => {
     try {
       await prisma.user.delete({
         where: { id: user_id },

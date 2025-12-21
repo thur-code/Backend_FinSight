@@ -3,7 +3,7 @@ import { AuthUserService } from "../../services/users/AuthUserService.ts";
 import { AuthUserSchema } from "../../schemas/AuthUser.schema.ts";
 
 export class AuthUserController {
-  async handle(req: Request, res: Response) {
+  handle = async (req: Request, res: Response) => {
     const userData = AuthUserSchema.parse(req.body);
 
     const authUserService = new AuthUserService();
@@ -11,5 +11,5 @@ export class AuthUserController {
     const login = await authUserService.execute(userData);
 
     return res.json(login);
-  }
+  };
 }

@@ -6,7 +6,7 @@ interface UserRequest {
 }
 
 export class DetailUserService {
-  async execute({ user_id }: UserRequest) {
+  execute = async ({ user_id }: UserRequest) => {
     const user = await prisma.user.findUnique({
       where: { id: user_id },
       select: { id: true, first_name: true, last_name: true, email: true },
@@ -17,5 +17,5 @@ export class DetailUserService {
     }
 
     return user;
-  }
+  };
 }

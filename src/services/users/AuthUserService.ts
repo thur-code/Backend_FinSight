@@ -6,7 +6,7 @@ import { AuthUserDTO } from "../../schemas/AuthUser.schema.ts";
 import { jwtSecret, jwtExpiresIn } from "../../config/jwt.ts";
 
 export class AuthUserService {
-  async execute(data: AuthUserDTO) {
+  execute = async (data: AuthUserDTO) => {
     const user = await prisma.user.findUnique({ where: { email: data.email } });
 
     if (!user) {
@@ -35,5 +35,5 @@ export class AuthUserService {
       last_name: user.last_name,
       token,
     };
-  }
+  };
 }

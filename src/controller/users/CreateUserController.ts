@@ -3,7 +3,7 @@ import { CreateUserService } from "../../services/users/CreateUserService.ts";
 import { createUserSchema } from "../../schemas/createUser.schema.ts";
 
 export class CreateUserController {
-  async handle(req: Request, res: Response) {
+  handle = async (req: Request, res: Response) => {
     const userData = createUserSchema.safeParse(req.body);
 
     if (!userData.success) {
@@ -21,5 +21,5 @@ export class CreateUserController {
     const user = await createUserService.execute(userData.data);
 
     return res.status(201).json(user);
-  }
+  };
 }

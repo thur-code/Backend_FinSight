@@ -2,7 +2,7 @@ import type { Request, Response } from "express";
 import { DetailUserService } from "../../services/users/DetailUserService.ts";
 
 export class DetailUserController {
-  async handle(req: Request, res: Response) {
+  handle = async (req: Request, res: Response) => {
     if (!req.user_id) {
       return res.status(401).json({ error: "Unauthorized" });
     }
@@ -14,5 +14,5 @@ export class DetailUserController {
     });
 
     return res.json(user);
-  }
+  };
 }

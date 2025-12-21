@@ -3,9 +3,9 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "first_name": "Lícia",
-  "last_name": "Santos",
-  "email": "licia@email.com",
+  "first_name": "Heigra",
+  "last_name": "Maciano",
+  "email": "heigra@email.com",
   "password": "123123"
 }
 
@@ -14,28 +14,28 @@ POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-  "email": "licia@email.com",
+  "email": "heigra@email.com",
   "password": "123123"
 }
 
 ### User details
 GET http://localhost:3000/me
-Authorization: Bearer
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiSGVpZ3JhIE1hY2lhbm8iLCJlbWFpbCI6ImhlaWdyYUBlbWFpbC5jb20iLCJzdWIiOiI4YTZkYzNmOC1mYmE3LTQxMDMtYjZjOS0wYjg5M2RiMTExOWEiLCJpYXQiOjE3NjYzNDk0MTMsImV4cCI6MTc2Njk1NDIxM30.8sXysaEhS3CyOwGSgczQa_5t6MzMdrSpPY6O_0ybDv0
 
 ### User update
 PATCH http://localhost:3000/users
 Content-Type: application/json
-Authorization: Bearer
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiSGVpZ3JhIE1hY2lhbm8iLCJlbWFpbCI6ImhlaWdyYUBlbWFpbC5jb20iLCJzdWIiOiI4YTZkYzNmOC1mYmE3LTQxMDMtYjZjOS0wYjg5M2RiMTExOWEiLCJpYXQiOjE3NjYzNDk0MTMsImV4cCI6MTc2Njk1NDIxM30.8sXysaEhS3CyOwGSgczQa_5t6MzMdrSpPY6O_0ybDv0
 
 {
-  "first_name": "Arthur",
-  "last_name": "Amaral",
-  "email": "arthur@email.com",
-  "password": "",
-  "newPassword": ""
+  "first_name": "Laura",
+  "last_name": "Lins Maciano",
+  "email": "laura@email.com",
+  "password": "123123",
+  "newPassword": "123456"
 }
 
 ### User delete
 DELETE http://localhost:3000/users
 Content-Type: application/json
-Authorization: Bearer
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiSGVpZ3JhIE1hY2lhbm8iLCJlbWFpbCI6ImhlaWdyYUBlbWFpbC5jb20iLCJzdWIiOiI4YTZkYzNmOC1mYmE3LTQxMDMtYjZjOS0wYjg5M2RiMTExOWEiLCJpYXQiOjE3NjYzNDk0MTMsImV4cCI6MTc2Njk1NDIxM30.8sXysaEhS3CyOwGSgczQa_5t6MzMdrSpPY6O_0ybDv0

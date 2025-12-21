@@ -4,7 +4,7 @@ import { AppError } from "../../errors/AppError.ts";
 import { CreateUserDTO } from "../../schemas/createUser.schema.ts";
 
 export class CreateUserService {
-  async execute(data: CreateUserDTO) {
+  execute = async (data: CreateUserDTO) => {
     const formattedEmail = data.email.toLowerCase();
 
     const emailAlreadyExists = await prisma.user.findUnique({
@@ -34,5 +34,5 @@ export class CreateUserService {
     });
 
     return user;
-  }
+  };
 }
