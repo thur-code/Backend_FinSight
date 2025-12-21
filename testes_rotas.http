@@ -5,6 +5,37 @@ Content-Type: application/json
 {
   "first_name": "Lícia",
   "last_name": "Santos",
-  "email": "LICIA@EMAIL.COM",
+  "email": "licia@email.com",
   "password": "123123"
 }
+
+### Log in user
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "licia@email.com",
+  "password": "123123"
+}
+
+### User details
+GET http://localhost:3000/me
+Authorization: Bearer
+
+### User update
+PATCH http://localhost:3000/users
+Content-Type: application/json
+Authorization: Bearer
+
+{
+  "first_name": "Arthur",
+  "last_name": "Amaral",
+  "email": "arthur@email.com",
+  "password": "",
+  "newPassword": ""
+}
+
+### User delete
+DELETE http://localhost:3000/users
+Content-Type: application/json
+Authorization: Bearer
