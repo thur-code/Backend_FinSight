@@ -5,6 +5,7 @@ import { DetailUserController } from "./controller/users/DetailUserController.ts
 import { isAuthenticated } from "./middlewares/isAuthenticated.ts";
 import { UpdateUserController } from "./controller/users/UpdateUserController.ts";
 import { DeleteUserController } from "./controller/users/DeleteUserController.ts";
+import { CreateTransactionController } from "./controller/transactions/CreateTransactionController.ts";
 
 export const router = Router();
 
@@ -14,3 +15,10 @@ router.post("/login", new AuthUserController().handle);
 router.get("/me", isAuthenticated, new DetailUserController().handle);
 router.patch("/users", isAuthenticated, new UpdateUserController().handle);
 router.delete("/users", isAuthenticated, new DeleteUserController().handle);
+
+// Transaction Users
+router.post(
+  "/transaction",
+  isAuthenticated,
+  new CreateTransactionController().handle
+);

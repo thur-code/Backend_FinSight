@@ -31,14 +31,14 @@ model Transaction {
   description String
   amount      Decimal
   type        TransactionType
-  category    String
+  category    String?
   confidence  Float?
 
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 
   user_id String
-  user    User   @relation(fields: [user_id], references: [id])
+  user    User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
 
   @@index([user_id, created_at])
   @@map("transactions")

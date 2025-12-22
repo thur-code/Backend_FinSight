@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
 import { CreateUserService } from "../../services/users/CreateUserService.ts";
-import { createUserSchema } from "../../schemas/createUser.schema.ts";
+import { createUserSchema } from "../../schemas/CreateUser.schema.ts";
 
 export class CreateUserController {
   handle = async (req: Request, res: Response) => {

@@ -3,9 +3,9 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "first_name": "Heigra",
-  "last_name": "Maciano",
-  "email": "heigra@email.com",
+  "first_name": "Arthur",
+  "last_name": "Amaral",
+  "email": "arthur@email.com",
   "password": "123123"
 }
 
@@ -14,7 +14,7 @@ POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-  "email": "heigra@email.com",
+  "email": "arthur@email.com",
   "password": "123123"
 }
 
@@ -38,4 +38,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiSGVpZ3JhIE1hY2lhbm8iLCJlb
 ### User delete
 DELETE http://localhost:3000/users
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiSGVpZ3JhIE1hY2lhbm8iLCJlbWFpbCI6ImhlaWdyYUBlbWFpbC5jb20iLCJzdWIiOiI4YTZkYzNmOC1mYmE3LTQxMDMtYjZjOS0wYjg5M2RiMTExOWEiLCJpYXQiOjE3NjYzNDk0MTMsImV4cCI6MTc2Njk1NDIxM30.8sXysaEhS3CyOwGSgczQa_5t6MzMdrSpPY6O_0ybDv0
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQXJ0aHVyIEFtYXJhbCIsImVtYWlsIjoiYXJ0aHVyQGVtYWlsLmNvbSIsInN1YiI6IjYxOGE2YWMxLWQ5YTAtNGE3MS1hODkzLTdkYjA2YzZjMjQ5MiIsImlhdCI6MTc2NjM4NTg3MCwiZXhwIjoxNzY2OTkwNjcwfQ.GZNnmTM_kNBAHLC2hM3NlDArp-9n5BI8yQnDjW49szc
+
+### Create transaction
+POST http://localhost:3000/transaction
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQXJ0aHVyIEFtYXJhbCIsImVtYWlsIjoiYXJ0aHVyQGVtYWlsLmNvbSIsInN1YiI6IjI4MzZlNjliLTQ3MzQtNDA5MS05ZjRhLTEwYjQzYmU1YTAxYSIsImlhdCI6MTc2NjM4NjkxNywiZXhwIjoxNzY2OTkxNzE3fQ.GzBBN4tciRDaBLoTf4xwYrub5OOBwubn-rRR6n0MSAs
+
+{
+  "description": "Salário",
+  "amount": 3000,
+  "type": "INCOME",
+  "category": "Renda"
+}
