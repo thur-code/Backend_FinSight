@@ -46,8 +46,18 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQXJ0aHVyIEFtYXJhbCIsImVtYWlsIjoiYXJ0aHVyQGVtYWlsLmNvbSIsInN1YiI6IjI4MzZlNjliLTQ3MzQtNDA5MS05ZjRhLTEwYjQzYmU1YTAxYSIsImlhdCI6MTc2NjM4NjkxNywiZXhwIjoxNzY2OTkxNzE3fQ.GzBBN4tciRDaBLoTf4xwYrub5OOBwubn-rRR6n0MSAs
 
 {
-  "description": "Salário",
-  "amount": 3000,
-  "type": "INCOME",
-  "category": "Renda"
+  "description": "Musculaçãp",
+  "amount": 1500,
+  "type": "EXPENSE",
+  "category": "Saúde"
 }
+
+### Transaction list
+GET http://localhost:3000/transactions?start=2025-12-12&end=2026-01-01&page=1&limit=3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQXJ0aHVyIEFtYXJhbCIsImVtYWlsIjoiYXJ0aHVyQGVtYWlsLmNvbSIsInN1YiI6IjI4MzZlNjliLTQ3MzQtNDA5MS05ZjRhLTEwYjQzYmU1YTAxYSIsImlhdCI6MTc2NjM4NjkxNywiZXhwIjoxNzY2OTkxNzE3fQ.GzBBN4tciRDaBLoTf4xwYrub5OOBwubn-rRR6n0MSAs
+
+### Summary
+GET http://localhost:3000/summary
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQXJ0aHVyIEFtYXJhbCIsImVtYWlsIjoiYXJ0aHVyQGVtYWlsLmNvbSIsInN1YiI6IjI4MzZlNjliLTQ3MzQtNDA5MS05ZjRhLTEwYjQzYmU1YTAxYSIsImlhdCI6MTc2NjM4NjkxNywiZXhwIjoxNzY2OTkxNzE3fQ.GzBBN4tciRDaBLoTf4xwYrub5OOBwubn-rRR6n0MSAs

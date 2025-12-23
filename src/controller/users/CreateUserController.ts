@@ -1,10 +1,10 @@
 import type { Request, Response } from "express";
 import { CreateUserService } from "../../services/users/CreateUserService.ts";
-import { createUserSchema } from "../../schemas/CreateUser.schema.ts";
+import { CreateUserSchema } from "../../schemas/CreateUser.schema.ts";
 
 export class CreateUserController {
   handle = async (req: Request, res: Response) => {
-    const userData = createUserSchema.safeParse(req.body);
+    const userData = CreateUserSchema.safeParse(req.body);
 
     if (!userData.success) {
       return res.status(400).json({

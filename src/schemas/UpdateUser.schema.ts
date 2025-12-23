@@ -1,6 +1,6 @@
 import * as z from "zod";
 
-export const updateUserSchema = z
+export const UpdateUserSchema = z
   .object({
     user_id: z.string(),
 
@@ -22,4 +22,4 @@ export const updateUserSchema = z
     }
   );
 
-export type UpdateUserDTO = z.infer<typeof updateUserSchema>;
+export type UpdateUserDTO = z.infer<typeof UpdateUserSchema>;

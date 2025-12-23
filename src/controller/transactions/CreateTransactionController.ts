@@ -9,7 +9,6 @@ export class CreateTransactionController {
     }
 
     const userData = CreateTransactionSchema.safeParse({
-      user_id: req.user_id,
       ...req.body,
     });
 
@@ -26,12 +25,7 @@ export class CreateTransactionController {
     const createTransactionService = new CreateTransactionService();
 
     const transaction = await createTransactionService.execute(
-      {
-        description: userData.data.description,
-        amount: userData.data.amount,
-        type: userData.data.type,
-        category: userData.data.category,
-      },
+      userData.data,
       req.user_id
     );
 

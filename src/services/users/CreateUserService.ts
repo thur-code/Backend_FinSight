@@ -1,7 +1,7 @@
 import { hashPassword } from "../../config/password.ts";
 import { prisma } from "../../config/prisma.ts";
 import { AppError } from "../../errors/AppError.ts";
-import { CreateUserDTO } from "../../schemas/createUser.schema.ts";
+import { CreateUserDTO } from "../../schemas/CreateUser.schema.ts";
 
 export class CreateUserService {
   execute = async (data: CreateUserDTO) => {

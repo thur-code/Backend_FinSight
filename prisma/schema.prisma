@@ -31,7 +31,7 @@ model Transaction {
   description String
   amount      Decimal
   type        TransactionType
-  category    String?
+  category    String
   confidence  Float?
 
   created_at DateTime @default(now())

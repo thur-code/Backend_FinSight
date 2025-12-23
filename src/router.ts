@@ -6,6 +6,8 @@ import { isAuthenticated } from "./middlewares/isAuthenticated.ts";
 import { UpdateUserController } from "./controller/users/UpdateUserController.ts";
 import { DeleteUserController } from "./controller/users/DeleteUserController.ts";
 import { CreateTransactionController } from "./controller/transactions/CreateTransactionController.ts";
+import { ListTransactionsController } from "./controller/transactions/ListTransactionsController.ts";
+import { SummaryController } from "./controller/transactions/SummaryController.ts";
 
 export const router = Router();
 
@@ -22,3 +24,11 @@ router.post(
   isAuthenticated,
   new CreateTransactionController().handle
 );
+
+router.get(
+  "/transactions",
+  isAuthenticated,
+  new ListTransactionsController().handle
+);
+
+router.get("/summary", isAuthenticated, new SummaryController().handle);

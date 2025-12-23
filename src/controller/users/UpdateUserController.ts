@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { updateUserSchema } from "../../schemas/UpdateUser.schema.ts";
+import { UpdateUserSchema } from "../../schemas/UpdateUser.schema.ts";
 import { UpdateUserService } from "../../services/users/UpdateUserService.ts";
 
 export class UpdateUserController {
@@ -8,7 +8,7 @@ export class UpdateUserController {
       return res.status(401).json({ error: "Unauthorized" });
     }
 
-    const userData = updateUserSchema.safeParse({
+    const userData = UpdateUserSchema.safeParse({
       ...req.body,
       user_id: req.user_id,
     });
