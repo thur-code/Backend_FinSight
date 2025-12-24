@@ -61,3 +61,17 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQXJ0aHVyIEFtYXJhbCIsImVtY
 GET http://localhost:3000/summary
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQXJ0aHVyIEFtYXJhbCIsImVtYWlsIjoiYXJ0aHVyQGVtYWlsLmNvbSIsInN1YiI6IjI4MzZlNjliLTQ3MzQtNDA5MS05ZjRhLTEwYjQzYmU1YTAxYSIsImlhdCI6MTc2NjM4NjkxNywiZXhwIjoxNzY2OTkxNzE3fQ.GzBBN4tciRDaBLoTf4xwYrub5OOBwubn-rRR6n0MSAs
+
+### Transaction delete
+DELETE http://localhost:3000/transaction/f2dbbf68-8106-4c47-9000-3b6187ae33fb
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQXJ0aHVyIEFtYXJhbCIsImVtYWlsIjoiYXJ0aHVyQGVtYWlsLmNvbSIsInN1YiI6IjI4MzZlNjliLTQ3MzQtNDA5MS05ZjRhLTEwYjQzYmU1YTAxYSIsImlhdCI6MTc2NjM4NjkxNywiZXhwIjoxNzY2OTkxNzE3fQ.GzBBN4tciRDaBLoTf4xwYrub5OOBwubn-rRR6n0MSAs
+
+### Transaction update
+PATCH http://localhost:3000/transaction/760ce668-bb77-469e-b0e9-9c1f310ba89e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQXJ0aHVyIEFtYXJhbCIsImVtYWlsIjoiYXJ0aHVyQGVtYWlsLmNvbSIsInN1YiI6IjI4MzZlNjliLTQ3MzQtNDA5MS05ZjRhLTEwYjQzYmU1YTAxYSIsImlhdCI6MTc2NjM4NjkxNywiZXhwIjoxNzY2OTkxNzE3fQ.GzBBN4tciRDaBLoTf4xwYrub5OOBwubn-rRR6n0MSAs
+
+{
+  "amount": 116
+}

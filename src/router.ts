@@ -8,6 +8,8 @@ import { DeleteUserController } from "./controller/users/DeleteUserController.ts
 import { CreateTransactionController } from "./controller/transactions/CreateTransactionController.ts";
 import { ListTransactionsController } from "./controller/transactions/ListTransactionsController.ts";
 import { SummaryController } from "./controller/transactions/SummaryController.ts";
+import { DeleteTransactionController } from "./controller/transactions/DeleteTransactionController.ts";
+import { UpdateTransactionController } from "./controller/transactions/UpdateTransactionController.ts";
 
 export const router = Router();
 
@@ -32,3 +34,15 @@ router.get(
 );
 
 router.get("/summary", isAuthenticated, new SummaryController().handle);
+
+router.delete(
+  "/transaction/:id",
+  isAuthenticated,
+  new DeleteTransactionController().handle
+);
+
+router.patch(
+  "/transaction/:id",
+  isAuthenticated,
+  new UpdateTransactionController().handle
+);

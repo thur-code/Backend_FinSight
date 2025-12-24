@@ -34,6 +34,6 @@ export class UpdateUserController {
       newPassword: userData.data.newPassword,
     });
 
-    return res.json({ message: "Update completed successfully" });
+    return res.status(204).send();
   };
 }
