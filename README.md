@@ -22,7 +22,6 @@ O projeto foi pensado com arquitetura limpa, validação forte e foco em escalab
 
 O projeto segue separação clara de responsabilidades:
 
-```
 src/
 ├─ config/ # Configurações (env, prisma, jwt, password)
 ├─ controller/ # Controllers (HTTP layer)
@@ -32,7 +31,6 @@ src/
 ├─ routes.ts # Rotas da aplicação
 ├─ docs/ # Swagger / OpenAPI
 └─ server.ts # Bootstrap da aplicação
-```
 
 ---
 
@@ -86,14 +84,18 @@ Integração com a API da OpenAI para:
 
 ## Rodando o projeto
 
-```
 # instalar dependências
+```
 npm install
+```
 
 # rodar migrations
+```
 npx prisma migrate dev
+```
 
 # iniciar servidor
+```
 npm run dev
 ```
 
