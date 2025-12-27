@@ -23,14 +23,14 @@ O projeto foi pensado com arquitetura limpa, validação forte e foco em escalab
 O projeto segue separação clara de responsabilidades:
 
 src/
-├─ config/ # Configurações (env, prisma, jwt, password)
-├─ controller/ # Controllers (HTTP layer)
-├─ services/ # Regras de negócio
-├─ schemas/ # Validação e contratos (Zod)
-├─ middlewares/ # Middlewares (auth, erros)
-├─ routes.ts # Rotas da aplicação
-├─ docs/ # Swagger / OpenAPI
-└─ server.ts # Bootstrap da aplicação
+- ├─ config/ # Configurações (env, prisma, jwt, password)
+- ├─ controller/ # Controllers (HTTP layer)
+- ├─ services/ # Regras de negócio
+- ├─ schemas/ # Validação e contratos (Zod)
+- ├─ middlewares/ # Middlewares (auth, erros)
+- ├─ routes.ts # Rotas da aplicação
+- ├─ docs/ # Swagger / OpenAPI
+- └─ server.ts # Bootstrap da aplicação
 
 ---
 
