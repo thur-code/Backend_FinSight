@@ -10,6 +10,7 @@ import { ListTransactionsController } from "./controller/transactions/ListTransa
 import { SummaryController } from "./controller/transactions/SummaryController.ts";
 import { DeleteTransactionController } from "./controller/transactions/DeleteTransactionController.ts";
 import { UpdateTransactionController } from "./controller/transactions/UpdateTransactionController.ts";
+import { InsightsController } from "./controller/ai/InsightsController.ts";
 
 export const router = Router();
 
@@ -46,3 +47,6 @@ router.patch(
   isAuthenticated,
   new UpdateTransactionController().handle
 );
+
+// Inteligência artificial
+router.get("/insights", isAuthenticated, new InsightsController().handle);

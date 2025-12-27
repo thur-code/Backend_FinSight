@@ -7,7 +7,7 @@ const envSchema = z.object({
     .default("development"),
   PORT: z.coerce.number().default(3000),
   DATABASE_URL: z.string().min(1),
-  OPENAI_API_KEY: z.string().min(1).optional(),
+  OPENAI_API_KEY: z.string().min(1),
   ENABLE_CHAT: z.coerce.boolean().default(false),
   JWT_SECRET: z.string().min(32),
 });

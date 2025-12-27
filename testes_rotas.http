@@ -75,3 +75,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQXJ0aHVyIEFtYXJhbCIsImVtY
 {
   "amount": 116
 }
+
+### Inteligência artificial
+GET http://localhost:3000/insights
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQXJ0aHVyIEFtYXJhbCIsImVtYWlsIjoiYXJ0aHVyQGVtYWlsLmNvbSIsInN1YiI6IjI4MzZlNjliLTQ3MzQtNDA5MS05ZjRhLTEwYjQzYmU1YTAxYSIsImlhdCI6MTc2NjgwNzgwNCwiZXhwIjoxNzY3NDEyNjA0fQ.ICU-esO1b2KQHMtDKSDXYD0y5JaIAdqN9uDYnov-2ok
+Content-Type: application/json
