@@ -14,7 +14,7 @@ O projeto foi pensado com arquitetura limpa, validação forte e foco em escalab
 - PostgreSQL / SQLite
 - JWT (Autenticação)  
 - Zod (validação e contratos)  
-- OpenAI API (em desenvolvimento)
+- OpenAI API
 
 ---
 
@@ -98,17 +98,3 @@ npx prisma migrate dev
 ```
 npm run dev
 ```
-
-## Backlog
-- Transações recorrentes
-- Relatórios financeiros
-- Recuperação de senha
-- Refatorações e melhorias de performance
-
-## Observações
-Este projeto foi desenvolvido com foco em:
-- Transações recorrentes
-- Relatórios financeiros
-- Recuperação de senha
-- Filtros avançados no summary
-- Refatorações e melhorias de performance
